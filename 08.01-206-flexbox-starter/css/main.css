@@ -95,89 +95,68 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
 html {
-  background-color: black;
+  background-color: #fff;
   height: 100%;
   width: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  color: #fff;
-  padding: 2em;
+  padding: 0 2em;
   font-size: 1.25em;
   height: 100%;
+  color: #fff;
 }
 
-header, footer, main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header,
+footer {
+  background-color: #222;
+  height: 80px;
   width: 100%;
-  border: 3px solid #ff33ff;
-  margin: .2em;
-}
-
-header {
-  font-size: 2.5em;
-  height: 200px;
 }
 
 main {
-  font-family: 'Raleway', sans-serif;
-  font-size: 2em;
-  height: 150px;
+  background-color: #ccc;
+  height: 250px;
+  width: 100%;
 }
 
-.wrapper {
+header,
+footer,
+main {
+  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
+}
+
+#div-1,
+#div-2,
+#div-3 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
-  font-weight: 700;
+  color: #fff;
+  line-height: 1.5em;
+  font-size: 1.25em;
+  height: auto;
 }
 
-.div-1, .div-2, .div-3 {
-  width: 30%;
-  align-items: center;
+.wrapper span {
+  font-family: 'Lora', sans-serif;
+  font-size: 1.3em;
+}
+
+.flex-container {
+  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center, and set flex-flow to row wrap*/
+}
+
+.flex-items {
+  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
+  color: #fff;
   line-height: 1.5em;
   font-size: 1.6em;
-  height: 500px;
-}
-
-.div-1, .div-2 {
-  border-right: 2px solid gray;
-  padding-right: 1.5em;
-}
-
-.div-1 {
-  margin-left: .5em;
-}
-
-footer {
-  font-size: 1.6em;
-  line-height: 4em;
-  flex-flow: nowrap;
-  margin-top: .5em;
-  margin-bottom: .5em;
-}
-
-footer img {
-  max-width: 40%;
-  padding: 3%;
-}
- footer ul {
-   align-self: flex-start;
-   padding-top: 5em;
- }
-footer ul li {
-  display: block;
-}
-
-footer li a {
-  text-decoration: none;
-  color: #ff33ff;
+  background-color: #f16059;
+  width: 30%;
+  height: 200px;
 }
 
 /* ==========================================================================
@@ -259,6 +238,23 @@ footer li a {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+@media all and (max-width: 768px) {
+    body {
+      padding: 1em;
+    }
+}
+
+@media (min-width: 1200px) {
+  #div-1,
+  #div-2{
+      /* set your flex value to 1 50% */
+  }
+
+  #div-3 {
+    /* set your flex value to 1 100% */
+  }
+}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
